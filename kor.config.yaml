@@ -1,0 +1,11 @@
+# See readme for valid options in this file
+# production, development
+mode: "development"
+port: 3000
+verbosity: 'debug'
+secret: 'A longer-than-48-characters secret key goes here'
+# If the database configuration files are missing
+dataConfigs: "data-configs"
+dataSources:
+  - name: 'mydatasource'
+    path: 'mydatasource.file'

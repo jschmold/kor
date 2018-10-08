@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "alwaysStrict": true,
+    "outDir": "dist",
+    "target": "es5",
+    "rootDir": "src",
+    "noImplicitThis": true,
+    "noImplicitReturns": true,
+    "removeComments": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "strictFunctionTypes": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitAny": true,
+    "declaration": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [
+      "es2015",
+      "es2015.promise",
+      "es2016"
+    ]
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}
