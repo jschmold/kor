@@ -41,7 +41,6 @@ export class KorApplication {
     initializeLogging(this.settings);
 
     for(let source of this.settings.dataSources!) {
-      let srcPath = 
       let path = join(this.settings.dataConfigs, `${source.path.includes('yaml') ? source.path : source.path + '.yaml' }`);
       let yaml = safeLoad(readFileSync(path, 'utf8'))
       if (yaml == null) throw new Error(`Unable to load ${path} for data config`);
