@@ -14,3 +14,24 @@ File: config.yaml
 | dataSources | The data sources to be loaded into the data connections module. These should align with filenames in the data sources directory | string[] | yes |
 | verbosity | The level of logging to permit. Default is warn. | debug, log, info, warn, error, none | no |
 | secret | The API secret key to use for the cookie-parser and csrf protection. | any string | yes | 
+
+# Modules
+
+Modules are a whole helluva lot like Angular. I built the config this way to enable some sense of familiarity for Angular Developers, and to make it a little easier to manage the whole process of modularizing server applications.
+
+```
+import { ApplicationModule } from '@jschmold/kor';
+// import your models here
+// import your controllers here
+
+@ApplicationModule(
+  models: [
+    // models here
+  ],
+  controllers: [
+    // controllers here
+  ]
+)
+export class MyApplicationModule {
+  
+}

@@ -9,3 +9,4 @@ export { ApplicationModule, IApplicationModuleOptions } from './module';
 let korConfig = safeLoad(readFileSync('./kor.config.yaml', 'utf8'));
 
 export let Kor = new KorApplication(korConfig);
+

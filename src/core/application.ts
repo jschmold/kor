@@ -14,7 +14,7 @@ export interface IKorApplicationSettings {
   dataConfigs: string | 'databases';
   dataSources?: {
     name: string,
-    path: string 
+    file: string 
   }[];
   verbosity?: LogLevel
   secret: string;
@@ -41,7 +41,7 @@ export class KorApplication {
     initializeLogging(this.settings);
 
     for(let source of this.settings.dataSources!) {
-      let path = join(this.settings.dataConfigs, `${source.path.includes('yaml') ? source.path : source.path + '.yaml' }`);
+      let path = join(this.settings.dataConfigs, `${source.file.includes('yaml') ? source.file : source.file + '.yaml' }`);
       let yaml = safeLoad(readFileSync(path, 'utf8'))
       if (yaml == null) throw new Error(`Unable to load ${path} for data config`);
       this.dataConnections.set(source.name, yaml)

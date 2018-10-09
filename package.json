@@ -1,6 +1,6 @@
 {
   "name": "@jschmold/kor",
-  "version": "0.0.1",
+  "version": "0.0.8",
   "description": "`npm i mocha ts-node typedoc typescript --global`",
   "main": "dist/index.js",
   "scripts": {
